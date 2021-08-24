@@ -44,7 +44,7 @@ export default {
     }
 
     &:disabled {
-      opacity: .6;
+      opacity: 0.6;
       cursor: default;
     }
   }
