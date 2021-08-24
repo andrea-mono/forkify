@@ -8,6 +8,7 @@
 <script>
 import WarningIcon from "@/components/UI/WarningIcon";
 import Text from "@/components/UI/Text";
+
 export default {
   name: "NoBookmarks",
   components: {Text, WarningIcon}
