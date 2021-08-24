@@ -1,7 +1,7 @@
 <template>
   <form class="search" :class="w" @submit.prevent="onSubmit">
     <AppTextbox :input="search" title="Search over 1,000,000 recipes..." @refresh="handleValue" />
-    <AppButton title="Search" :disabled="canSubmit">
+    <AppButton title="Search" class="right">
       <SearchIcon />
     </AppButton>
   </form>

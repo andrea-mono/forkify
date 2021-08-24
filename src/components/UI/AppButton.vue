@@ -1,5 +1,5 @@
 <template>
-  <button v-bind="$attrs" class="btn">
+  <button v-bind="$attrs" class="btn" disabled>
     <slot />
     <span v-text="title"></span>
   </button>
