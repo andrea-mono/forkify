@@ -1,5 +1,5 @@
 <template>
-  <button v-bind="$attrs" class="button">
+  <button v-bind="$attrs" class="btn">
     <slot />
     <span v-text="title"></span>
   </button>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .button {
+  .btn {
     font-size: 1.4rem;
     background: linear-gradient(to right bottom,#fbdb89,#f48982);
     color: #fff;
@@ -30,32 +30,22 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 150ms linear;
-
-    &:hover {
-      transform: scale(1.05);
-    }
 
     > span {
       margin-left: 1rem;
     }
 
-    /*&:not(:disabled) {
-      opacity: 100%;
+    &:not(:disabled) {
       transition: all 150ms linear;
 
       &:hover {
         transform: scale(1.05);
       }
-    }*/
+    }
 
     &:disabled {
       opacity: 60%;
       cursor: default;
-
-      &:hover {
-        transform: none;
-      }
     }
   }
 </style>
