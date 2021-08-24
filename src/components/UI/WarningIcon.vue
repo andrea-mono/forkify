@@ -1,0 +1,25 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true"
+       role="img"
+       width="7rem"
+       preserveAspectRatio="xMidYMid meet"
+       viewBox="0 0 36 36"
+       class="warning">
+    <path class="clr-i-outline clr-i-outline-path-1" d="M18 21.32a1.3 1.3 0 0 0 1.3-1.3V14a1.3 1.3 0 1 0-2.6 0v6a1.3 1.3 0 0 0 1.3 1.32z" fill="currentColor"></path>
+    <circle class="clr-i-outline clr-i-outline-path-2" cx="17.95" cy="24.27" r="1.5" fill="currentColor"></circle>
+    <path class="clr-i-outline clr-i-outline-path-3" d="M30.33 25.54L20.59 7.6a3 3 0 0 0-5.27 0L5.57 25.54A3 3 0 0 0 8.21 30h19.48a3 3 0 0 0 2.64-4.43zm-1.78 1.94a1 1 0 0 1-.86.49H8.21a1 1 0 0 1-.88-1.48l9.74-17.94a1 1 0 0 1 1.76 0l9.74 17.94a1 1 0 0 1-.02.99z" fill="currentColor"></path>
+  </svg>
+</template>
+
+<script>
+export default {
+  name: "WarningIcon"
+}
+</script>
+
+<style scoped>
+.warning {
+  color: #f38e82;
+}
+</style>
