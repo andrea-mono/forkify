@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
 
+import recipes from "@/store/modules/recipes";
+
 export default createStore({
   state: {
     mobileMenuOpened: false,
@@ -20,5 +22,6 @@ export default createStore({
     }
   },
   modules: {
+    recipes
   }
 })

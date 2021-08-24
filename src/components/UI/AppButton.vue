@@ -30,14 +30,22 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 150ms linear;
 
     > span {
       margin-left: 1rem;
     }
 
-    &:hover {
-      transform: scale(1.05);
+    &:not(:disabled) {
+      transition: all 150ms linear;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &:disabled {
+      opacity: 60%;
+      cursor: default;
     }
   }
 </style>

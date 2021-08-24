@@ -6,7 +6,7 @@
     <nav-button title="Bookmarks" dropdown>
       <BookmarksIcon/>
       <template v-slot:dropdown-content>
-        <NoBookmarks />
+        <AlertMsg text="No bookmarks yet. Find a nice recipe and bookmark it ;)" />
       </template>
     </nav-button>
   </div>
@@ -16,11 +16,11 @@
 import NavButton from "@/components/UI/NavButton";
 import BookmarksIcon from "@/components/UI/BookmarksIcon";
 import AddRecipeIcon from "@/components/UI/AddRecipeIcon";
-import NoBookmarks from "@/components/layout/header/NoBookmarks";
+import AlertMsg from "@/components/UI/AlertMsg";
 
 export default {
   name: "Actions",
-  components: {NoBookmarks, AddRecipeIcon, BookmarksIcon, NavButton}
+  components: {AlertMsg, AddRecipeIcon, BookmarksIcon, NavButton}
 }
 </script>
 

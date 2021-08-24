@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style scoped>
+.sm {
+  font-size: 1.2rem;
+}
+
 .lg {
   font-size: 1.5rem;
 }

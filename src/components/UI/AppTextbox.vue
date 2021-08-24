@@ -1,14 +1,36 @@
 <template>
-  <input type="text" class="textbox" :placeholder="title">
+  <input v-model="value" type="text" class="textbox" :placeholder="title" @input="newValue">
 </template>
 
 <script>
+import {ref, watch} from "vue";
+
 export default {
   name: "AppTextbox",
   props: {
+    input: {
+      type: String,
+      required: false
+    },
     title: {
       type: String,
       required: true
+    }
+  },
+  setup(props, {emit}) {
+    const value = ref(null)
+
+    watch(() => props.input, (newValue) => {
+      value.value = newValue
+    })
+
+    const newValue = () => {
+      emit('refresh', value.value)
+    }
+
+    return {
+      value,
+      newValue
     }
   }
 }
