@@ -3,7 +3,7 @@
     <slot />
     <span class="title" v-text="title"></span>
     <Dropdown v-if="dropdown">
-      Content
+      <slot name="dropdown-content" />
     </Dropdown>
   </button>
 </template>

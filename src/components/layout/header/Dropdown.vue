@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$height: 80px;
+$height: 180px;
 
 .dropdown {
   position: absolute;
@@ -21,12 +21,16 @@ $height: 80px;
   height: $height;
   opacity: 0;
   display: none;
+  overflow-y: auto;
   pointer-events: none;
+  cursor: default;
   transition: opacity 500ms linear;
 
   @media screen and (min-width: 1023px) {
     width: 450px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

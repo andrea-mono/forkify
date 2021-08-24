@@ -5,6 +5,9 @@
     </nav-button>
     <nav-button title="Bookmarks" dropdown>
       <BookmarksIcon/>
+      <template v-slot:dropdown-content>
+        <NoBookmarks />
+      </template>
     </nav-button>
   </div>
 </template>
@@ -13,10 +16,11 @@
 import NavButton from "@/components/UI/NavButton";
 import BookmarksIcon from "@/components/UI/BookmarksIcon";
 import AddRecipeIcon from "@/components/UI/AddRecipeIcon";
+import NoBookmarks from "@/components/layout/header/NoBookmarks";
 
 export default {
   name: "Actions",
-  components: {AddRecipeIcon, BookmarksIcon, NavButton}
+  components: {NoBookmarks, AddRecipeIcon, BookmarksIcon, NavButton}
 }
 </script>
 
