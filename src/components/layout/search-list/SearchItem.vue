@@ -63,11 +63,19 @@ export default {
     > .title {
       font-size: 1.3rem;
       color: #f38e82;
-      width: 250px;
+      width: 200px;
       text-transform: uppercase;
       white-space: nowrap;
       overflow-x: hidden;
       text-overflow: ellipsis;
+
+      @media screen and (min-width: 767px) {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 1023px) {
+        width: 250px;
+      }
     }
 
     > .publisher {
