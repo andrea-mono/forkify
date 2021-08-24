@@ -36,6 +36,7 @@ export default {
     }
 
     &:not(:disabled) {
+      opacity: 100%;
       transition: all 150ms linear;
 
       &:hover {
