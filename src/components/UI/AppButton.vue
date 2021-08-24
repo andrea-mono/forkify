@@ -1,5 +1,5 @@
 <template>
-  <button v-bind="$attrs" class="btn">
+  <button v-bind="$attrs" class="button">
     <slot />
     <span v-text="title"></span>
   </button>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .btn {
+  .button {
     font-size: 1.4rem;
     background: linear-gradient(to right bottom,#fbdb89,#f48982);
     color: #fff;
