@@ -1,23 +1,21 @@
 <template>
   <div class="recipe">
-    RECIPE
+    <Message text="Start by searching for a recipe or an ingredient. Have fun!" />
   </div>
 </template>
 
 <script>
+import Message from "@/components/UI/Message";
+
 export default {
-  name: "Recipe"
+  name: "Recipe",
+  components: {Message}
 }
 </script>
 
 <style lang="scss" scoped>
 .recipe {
   background: #f9f5f3;
-  display: none;
-
-  @media screen and (min-width: 1023px) {
-    flex: 1;
-    display: block;
-  }
+  flex: 1;
 }
 </style>

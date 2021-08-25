@@ -36,6 +36,7 @@ export default {
     const canSubmit = computed(() => search.value && !search.value.replace(/\s/g, '').length) // not empty & not only whitespaces
 
     const onSubmit = () => {
+      dispatch('toggleSearchActive')
       dispatch('recipes/search', search.value)
       search.value = ''
     }

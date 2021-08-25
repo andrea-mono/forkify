@@ -54,7 +54,7 @@ export default {
     align-items: center;
   }
 
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1024px) {
     display: none;
   }
 }

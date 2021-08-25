@@ -59,7 +59,7 @@ export default {
     flex-direction: column;
   }
 
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1024px) {
     min-height: auto;
     flex: 0 0 400px;
   }

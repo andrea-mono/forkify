@@ -2,7 +2,6 @@
   <svg xmlns="http://www.w3.org/2000/svg"
        aria-hidden="true"
        role="img"
-       width="7rem"
        preserveAspectRatio="xMidYMid meet"
        viewBox="0 0 36 36"
        class="warning">
@@ -18,8 +17,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .warning {
   color: #f38e82;
+  width: 7rem;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 4rem;
+  }
 }
 </style>

@@ -66,7 +66,7 @@ export default {
     cursor: pointer;
   }
 
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1024px) {
     display: none;
   }
 }
