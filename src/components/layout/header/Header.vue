@@ -19,7 +19,7 @@ export default {
 header {
   position: relative;
 
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1024px) {
     position: static;
   }
 }

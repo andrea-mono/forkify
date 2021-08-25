@@ -19,7 +19,7 @@ export default {
 .menu {
   display: none;
 
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1024px) {
     display: flex;
     align-items: stretch;
     flex: 1;

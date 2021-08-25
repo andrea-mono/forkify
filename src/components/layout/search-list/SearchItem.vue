@@ -69,11 +69,11 @@ export default {
       overflow-x: hidden;
       text-overflow: ellipsis;
 
-      @media screen and (min-width: 767px) {
+      @media screen and (min-width: 768px) {
         width: 100%;
       }
 
-      @media screen and (min-width: 1023px) {
+      @media screen and (min-width: 1024px) {
         width: 250px;
       }
     }

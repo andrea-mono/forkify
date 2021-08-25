@@ -61,7 +61,7 @@ export default {
     background: #f2efee;
   }
 
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1024px) {
     padding: 0 1.2rem;
     border-radius: 0;
 

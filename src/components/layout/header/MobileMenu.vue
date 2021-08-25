@@ -34,10 +34,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$height: 250px;
+
 .mobile-menu {
   background: #faf9f9;
   width: 100%;
-  height: 200px;
+  height: $height;
   overflow: hidden;
 
   > .inner-content {
@@ -46,15 +48,19 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (min-width: 640px) {
+      padding: 6rem 3rem;
+    }
   }
 
   .actions {
-    padding: 2rem 0;
+    padding-top: 2rem;
     justify-content: center;
     align-items: center;
   }
 
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1024px) {
     display: none;
   }
 }
@@ -78,7 +84,7 @@ export default {
     height: 0;
   }
   to {
-    height: 200px;
+    height: $height;
   }
 }
 

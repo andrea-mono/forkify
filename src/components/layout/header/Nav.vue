@@ -24,10 +24,5 @@ export default {
   background: #f9f5f3;
   display: flex;
   justify-content: space-between;
-
-  @media screen and (min-width: 1023px) {
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
-  }
 }
 </style>

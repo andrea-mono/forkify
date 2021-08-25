@@ -20,8 +20,10 @@ export default {
 .sm {
   font-size: 1.2rem;
 }
-
 .lg {
   font-size: 1.5rem;
+}
+.xl {
+  font-size: 1.7rem;
 }
 </style>
