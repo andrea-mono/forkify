@@ -15,7 +15,7 @@
 import {computed} from "vue";
 import {useStore} from "vuex";
 
-import AlertMsg from "@/components/UI/AlertMsg";
+import AlertMsg from "@/components/UI/AlertMessage";
 import SearchItem from "@/components/layout/search-list/SearchItem";
 import SearchItemSkeleton from "@/components/layout/search-list/SearchItemSkeleton";
 import Pagination from "@/components/layout/search-list/Pagination";

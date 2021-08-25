@@ -1,7 +1,7 @@
 <template>
   <form class="search" :class="w" @submit.prevent="onSubmit">
     <AppTextbox :input="search" title="Search over 1,000,000 recipes..." @refresh="handleValue" />
-    <AppButton title="Search" class="right" :disabled="canSubmit">
+    <AppButton title="Search" class="search-btn" :disabled="canSubmit">
       <SearchIcon />
     </AppButton>
   </form>
@@ -55,7 +55,7 @@ export default {
 .search {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 
   &.half {
     width: 50%;
@@ -65,9 +65,21 @@ export default {
     width: 100%;
   }
 
-  .right {
-    position: absolute;
-    right: 0;
+  .search-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: 640px) {
+    align-items: center;
+    flex-wrap: nowrap;
+
+    .search-btn {
+      position: absolute;
+      right: 0;
+      width: auto;
+      margin-top: 0;
+    }
   }
 }
 </style>

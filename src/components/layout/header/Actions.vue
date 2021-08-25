@@ -16,7 +16,7 @@
 import NavButton from "@/components/UI/NavButton";
 import BookmarksIcon from "@/components/UI/BookmarksIcon";
 import AddRecipeIcon from "@/components/UI/AddRecipeIcon";
-import AlertMsg from "@/components/UI/AlertMsg";
+import AlertMsg from "@/components/UI/AlertMessage";
 
 export default {
   name: "Actions",
