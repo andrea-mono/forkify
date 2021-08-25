@@ -2,7 +2,9 @@
   <div class="search_list">
     <SearchItemSkeleton v-if="isLoading" :repeat="5" />
     <div class="recipes" v-else-if="recipes">
-      <SearchItem v-for="recipe in recipes" :key="recipe.recipe_id" :item="recipe" />
+      <div class="items fade-in">
+        <SearchItem v-for="recipe in recipes" :key="recipe.recipe_id" :item="recipe"/>
+      </div>
       <Pagination />
     </div>
     <AlertMsg v-if="error" text="No recipes found for your query! Please try again ;)" />
@@ -57,11 +59,26 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    .items {
+      &.fade-in {
+        animation: fadeIn 1s ease;
+      }
+    }
   }
 
   @media screen and (min-width: 1024px) {
     min-height: auto;
     flex: 0 0 400px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>
