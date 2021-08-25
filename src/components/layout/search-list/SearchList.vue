@@ -49,10 +49,12 @@ export default {
 <style lang="scss" scoped>
 .search_list {
   background: #fff;
+  min-height: calc(100vh - 100px);
   flex: 1;
   padding: 2.5rem 0;
 
   @media screen and (min-width: 1023px) {
+    min-height: auto;
     flex: 0 0 400px;
   }
 }
