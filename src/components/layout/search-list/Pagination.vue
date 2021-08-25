@@ -16,7 +16,7 @@ export default {
 <style scoped>
 .pagination {
   display: flex;
-  justify-content: end;
-  padding: 1rem 3rem;
+  margin-top: auto;
+  padding: 2rem 3rem 0 3rem;
 }
 </style>

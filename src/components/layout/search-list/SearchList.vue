@@ -1,7 +1,7 @@
 <template>
   <div class="search_list">
     <SearchItemSkeleton v-if="isLoading" :repeat="5" />
-    <div v-else-if="recipes">
+    <div class="recipes" v-else-if="recipes">
       <SearchItem v-for="recipe in recipes" :key="recipe.recipe_id" :item="recipe" />
       <Pagination />
     </div>
@@ -52,6 +52,12 @@ export default {
   min-height: calc(100vh - 100px);
   flex: 1;
   padding: 2.5rem 0;
+
+  .recipes {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
   @media screen and (min-width: 1023px) {
     min-height: auto;

@@ -12,11 +12,11 @@ export default {
 
 <style lang="scss" scoped>
 .recipe {
+  background: #f9f5f3;
   display: none;
 
   @media screen and (min-width: 1023px) {
     flex: 1;
-    height: 500px;
     display: block;
   }
 }

@@ -41,7 +41,13 @@ html {
       margin: auto;
 
       main {
+        min-height: 1070px;
         display: flex;
+      }
+
+      @media screen and (min-width: 1023px) {
+        border-radius: .8rem;
+        overflow: hidden;
       }
     }
 
