@@ -1,5 +1,5 @@
 <template>
-  <button v-bind="$attrs" class="button">
+  <button v-bind="$attrs" class="button" :class="{ secondaryBtn: secondary, reversedBtn: reversed }">
     <slot />
     <span v-text="title"></span>
   </button>
@@ -12,6 +12,14 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    secondary: {
+      type: Boolean,
+      default: false
+    },
+    reversed: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -33,6 +41,28 @@ export default {
 
     > span {
       margin-left: 1rem;
+    }
+
+    &.secondaryBtn {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #f38e82;
+      background: #f9f5f3;
+      text-transform: none;
+      padding: .8rem 2rem;
+
+      &:hover {
+        background: #f2efee;
+        transform: none !important;
+      }
+    }
+
+    &.reversedBtn {
+      flex-direction: row-reverse;
+
+      > span {
+        margin-right: 1rem;
+      }
     }
 
     &:not(:disabled) {

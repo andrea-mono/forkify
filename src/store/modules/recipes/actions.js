@@ -5,9 +5,11 @@ export default {
         try {
             state.error ? commit('setError', false) : null
 
+            commit('changeCurrentPage', 1)
             commit('setLoading')
             commit('setRecipes', await axios.get(`${process.env.VUE_APP_API_BASE_URL}search?q=${value}`))
             commit('setLoading', false)
+            commit('setTotalPages')
         }
         catch (e) {
             console.error(e)
@@ -15,5 +17,8 @@ export default {
             commit('setLoading', false)
             commit('setError')
         }
+    },
+    changeCurrentPage({commit}, page) {
+        commit('changeCurrentPage', page)
     }
 }
