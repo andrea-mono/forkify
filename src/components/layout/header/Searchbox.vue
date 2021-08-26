@@ -12,7 +12,7 @@ import {computed, ref} from "vue";
 import {useStore} from "vuex";
 
 import AppTextbox from "@/components/UI/AppTextbox";
-import AppButton from "@/components/UI/AppButton";
+import AppButton from "@/components/UI/buttons/AppButton";
 import SearchIcon from "@/components/UI/icons/SearchIcon";
 
 export default {

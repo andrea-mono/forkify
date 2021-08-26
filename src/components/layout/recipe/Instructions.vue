@@ -12,7 +12,7 @@
 
 <script>
 import Text from "@/components/UI/Text";
-import AppButton from "@/components/UI/AppButton";
+import AppButton from "@/components/UI/buttons/AppButton";
 import ArrowIcon from "@/components/UI/icons/ArrowIcon";
 
 export default {

@@ -1,5 +1,5 @@
 <template>
-  <button class="nav-button" @mouseenter="toggle" @mouseout="toggle">
+  <button class="nav-button">
     <slot />
     <span class="title" v-text="title"></span>
     <Dropdown v-if="dropdown">

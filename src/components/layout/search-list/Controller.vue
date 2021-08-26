@@ -6,7 +6,7 @@
 
 <script>
 import ArrowIcon from "@/components/UI/icons/ArrowIcon";
-import AppButton from "@/components/UI/AppButton";
+import AppButton from "@/components/UI/buttons/AppButton";
 
 export default {
   name: "Controller",

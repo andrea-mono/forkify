@@ -8,7 +8,7 @@
 
 <script>
 import Logo from "@/components/UI/Logo";
-import MobileMenuButton from "@/components/UI/MobileMenuButton";
+import MobileMenuButton from "@/components/UI/buttons/MobileMenuButton";
 import Menu from "@/components/layout/header/Menu";
 
 export default {

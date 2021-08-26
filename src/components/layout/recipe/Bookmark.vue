@@ -9,7 +9,7 @@
 <script>
 import {ref} from "vue";
 
-import AppButton from "@/components/UI/AppButton";
+import AppButton from "@/components/UI/buttons/AppButton";
 import BookmarksIcon from "@/components/UI/icons/BookmarksIcon";
 
 export default {
