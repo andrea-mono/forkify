@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import HappyIcon from "@/components/UI/HappyIcon";
+import HappyIcon from "@/components/UI/icons/HappyIcon";
 import Text from "@/components/UI/Text";
 
 export default {

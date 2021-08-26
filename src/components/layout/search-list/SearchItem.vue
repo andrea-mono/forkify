@@ -1,5 +1,5 @@
 <template>
-  <div class="search-item">
+  <div class="search-item" :class="{ active: isActive }" @click="loadRecipe(item.recipe_id)">
     <figure>
       <img :src="item.image_url" class="thumbnail" :alt="item.title">
     </figure>
@@ -11,7 +11,11 @@
 </template>
 
 <script>
+import {computed} from "vue";
+import {useStore} from "vuex";
+
 import Text from "@/components/UI/Text";
+
 export default {
   name: "SearchItem",
   components: {Text},
@@ -19,6 +23,25 @@ export default {
     item: {
       type: Object,
       required: true
+    }
+  },
+  setup(props) {
+    const {getters, dispatch} = useStore()
+
+    const recipe = computed(() => getters['currentRecipe/getRecipe'])
+    const selectedRecipe = computed(() => getters['recipes/getSelectedRecipe'])
+    const isActive = computed(() => props.item.recipe_id === selectedRecipe.value)
+
+    const loadRecipe = (id) => {
+      window.history.replaceState(null, null, `/recipe/${id}`);
+      dispatch('recipes/setCurrentRecipe', id)
+      dispatch('currentRecipe/loadRecipe', id)
+    }
+
+    return {
+      recipe,
+      isActive,
+      loadRecipe
     }
   }
 }
@@ -38,6 +61,7 @@ export default {
     border-radius: 50%;
     overflow: hidden;
     display: block;
+    pointer-events: none;
 
     > .thumbnail {
       width: 100%;
@@ -59,6 +83,7 @@ export default {
   .info {
     flex: 1;
     padding: 1rem 2rem;
+    pointer-events: none;
 
     > .title {
       font-size: 1.3rem;
@@ -83,6 +108,10 @@ export default {
       text-transform: uppercase;
       margin-top: .8rem;
     }
+  }
+
+  &.active {
+    background: #ece8e8;
   }
 
   &:hover {

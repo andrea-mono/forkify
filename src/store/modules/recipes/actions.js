@@ -18,6 +18,9 @@ export default {
             commit('setError')
         }
     },
+    setCurrentRecipe({commit}, id) {
+        commit('setCurrentRecipe', id)
+    },
     changeCurrentPage({commit}, page) {
         commit('changeCurrentPage', page)
     }

@@ -13,7 +13,7 @@ import {useStore} from "vuex";
 
 import AppTextbox from "@/components/UI/AppTextbox";
 import AppButton from "@/components/UI/AppButton";
-import SearchIcon from "@/components/UI/SearchIcon";
+import SearchIcon from "@/components/UI/icons/SearchIcon";
 
 export default {
   name: "Searchbox",
@@ -37,6 +37,7 @@ export default {
 
     const onSubmit = () => {
       dispatch('toggleSearchActive')
+      dispatch('recipes/setCurrentRecipe', null)
       dispatch('recipes/search', search.value)
       search.value = ''
     }

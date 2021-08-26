@@ -2,6 +2,9 @@ export default {
     setRecipes(state, recipes) {
         state.recipes = recipes.data
     },
+    setCurrentRecipe(state, id) {
+        state.selectedRecipe = id
+    },
     setTotalPages(state) {
         state.totalPages = Math.ceil(state.recipes.count / state.limit)
     },

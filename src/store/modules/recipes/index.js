@@ -6,9 +6,10 @@ const recipes = {
     namespaced: true,
     state: {
         recipes: null,
+        selectedRecipe: null,
         currentPage: 1,
         totalPages: 0,
-        limit: 10,
+        limit: 9,
         error: false,
         isLoading: false
     },

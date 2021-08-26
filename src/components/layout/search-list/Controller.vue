@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ArrowIcon from "@/components/UI/ArrowIcon";
+import ArrowIcon from "@/components/UI/icons/ArrowIcon";
 import AppButton from "@/components/UI/AppButton";
 
 export default {

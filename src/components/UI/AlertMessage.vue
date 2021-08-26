@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import WarningIcon from "@/components/UI/WarningIcon";
+import WarningIcon from "@/components/UI/icons/WarningIcon";
 import Text from "@/components/UI/Text";
 
 export default {

@@ -1,7 +1,11 @@
 <template>
-  <button v-bind="$attrs" class="button" :class="{ secondaryBtn: secondary, reversedBtn: reversed }">
+  <a v-if="url" v-bind="$attrs" :href="url" class="button" :class="{ 'secondary-btn': secondary, 'reversed-btn': reversed, 'rounded-full': roundedFull }" target="_blank">
     <slot />
-    <span v-text="title"></span>
+    <span v-if="title" v-text="title"></span>
+  </a>
+  <button v-else v-bind="$attrs" class="button" :class="{ 'secondary-btn': secondary, 'reversed-btn': reversed, 'rounded-full': roundedFull }">
+    <slot />
+    <span v-if="title" v-text="title"></span>
   </button>
 </template>
 
@@ -9,9 +13,13 @@
 export default {
   name: "AppButton",
   props: {
+    url: {
+      type: String,
+      required: false
+    },
     title: {
       type: String,
-      required: true
+      required: false
     },
     secondary: {
       type: Boolean,
@@ -20,12 +28,21 @@ export default {
     reversed: {
       type: Boolean,
       default: false
+    },
+    roundedFull: {
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  a {
+    text-decoration: none;
+    width: fit-content;
+  }
+
   .button {
     font-size: 1.4rem;
     background: linear-gradient(to right bottom,#fbdb89,#f48982);
@@ -43,7 +60,7 @@ export default {
       margin-left: 1rem;
     }
 
-    &.secondaryBtn {
+    &.secondary-btn {
       font-size: 1.3rem;
       font-weight: 700;
       color: #f38e82;
@@ -57,12 +74,22 @@ export default {
       }
     }
 
-    &.reversedBtn {
+    &.reversed-btn {
       flex-direction: row-reverse;
 
       > span {
         margin-right: 1rem;
       }
+    }
+
+    &.rounded-full {
+      width: 45px;
+      height: 45px;
+      padding: 0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &:not(:disabled) {

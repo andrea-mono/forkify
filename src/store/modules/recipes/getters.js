@@ -11,6 +11,9 @@ export default {
     getResultsLength(state) {
         return state.recipes.length > 0
     },
+    getSelectedRecipe(state) {
+        return state.selectedRecipe
+    },
     getCurrentPage(state) {
         return state.currentPage
     },

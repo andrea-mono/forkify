@@ -2,8 +2,8 @@
   <div class="container">
     <Header />
     <main>
-      <SearchList v-if="isActive || actualBreakpoint !== 'md'" />
-      <Recipe v-if="!isActive || actualBreakpoint !== 'md'"/>
+      <SearchList v-if="isActive && !selectedRecipe || actualBreakpoint !== 'md'" />
+      <Recipe v-if="!isActive || selectedRecipe || actualBreakpoint !== 'md'"/>
     </main>
   </div>
 </template>
@@ -14,7 +14,7 @@ import {useStore} from "vuex";
 
 import Header from "@/components/layout/header/Header";
 import SearchList from "@/components/layout/search-list/SearchList";
-import Recipe from "@/components/layout/Recipe";
+import Recipe from "@/components/layout/recipe/Recipe";
 
 export default {
   name: 'App',
@@ -23,20 +23,21 @@ export default {
     const {dispatch, getters} = useStore()
 
     const isActive = computed(() => getters['searchActive'])
+    const selectedRecipe = computed(() => getters['recipes/getSelectedRecipe'])
     const actualBreakpoint = computed(() => getters['actualBreakpoint'])
+
+    onMounted(() => {
+      dispatch('setViewportSize', window.innerWidth)
+      listenViewportSize()
+    })
 
     const listenViewportSize = () => {
       window.addEventListener('resize', () => dispatch('setViewportSize', window.innerWidth))
     }
 
-    onMounted(() => {
-      dispatch('setViewportSize', window.innerWidth)
-
-      listenViewportSize()
-    })
-
     return {
       isActive,
+      selectedRecipe,
       actualBreakpoint
     }
   }
