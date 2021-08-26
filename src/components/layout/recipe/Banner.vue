@@ -1,6 +1,6 @@
 <template>
   <figure>
-    <ArrowIcon @click="back" />
+    <ArrowIcon size="md" @click="back" />
     <img :src="asset" :alt="title">
     <h1>
       <span v-text="title"></span>
@@ -50,7 +50,8 @@ figure {
 
   > .arrow {
     position: absolute;
-    top: 0;
+    top: 1rem;
+    left: 1rem;
     z-index: 2;
     color: #fff;
     display: block;
