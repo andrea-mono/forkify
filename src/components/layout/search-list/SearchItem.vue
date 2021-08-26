@@ -114,9 +114,11 @@ export default {
     background: #ece8e8;
   }
 
-  &:hover {
-    background: #f9f5f3;
-    transform: translateY(-3px);
+  &:not(.active) {
+    &:hover {
+      background: #f9f5f3;
+      transform: translateY(-3px);
+    }
   }
 }
 </style>

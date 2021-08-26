@@ -4,10 +4,10 @@
     <RecipeSkeleton v-if="isLoading" />
     <transition name="fade-in">
       <div v-if="recipe && !isLoading" class="content">
-        <Banner :asset="recipe.image_url" :title="recipe.title"/>
-        <Actions/>
-        <Ingredients :ingredients="recipe.ingredients"/>
-        <Instructions :publisher="recipe.publisher" :url="recipe.source_url"/>
+        <Banner :asset="recipe.image_url" :title="recipe.title" />
+        <Actions />
+        <Ingredients :ingredients="recipe.ingredients" />
+        <Instructions :publisher="recipe.publisher" :url="recipe.source_url" />
       </div>
     </transition>
   </div>
