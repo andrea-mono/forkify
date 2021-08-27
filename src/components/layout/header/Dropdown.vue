@@ -27,7 +27,6 @@ export default {
   transition: opacity 500ms linear;
 
   @media screen and (min-width: 1024px) {
-    width: 450px;
     display: flex;
     justify-content: center;
   }

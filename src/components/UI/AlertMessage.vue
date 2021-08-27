@@ -30,7 +30,7 @@ export default {
   flex-direction: column;
   align-items: center;
   text-transform: none;
-  text-align: left;
+  text-align: center;
 
   > .text {
     color: #615551;
