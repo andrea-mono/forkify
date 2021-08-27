@@ -3,7 +3,7 @@
     <SearchItemSkeleton v-if="isLoading" :repeat="5" />
     <div class="recipes" v-else-if="recipes">
       <div class="items fade-in">
-        <SearchItem v-for="recipe in recipes" :key="recipe.recipe_id" :item="recipe"/>
+        <Item v-for="recipe in recipes" :key="recipe.recipe_id" :item="recipe" />
       </div>
       <Pagination />
     </div>
@@ -16,13 +16,13 @@ import {computed} from "vue";
 import {useStore} from "vuex";
 
 import AlertMsg from "@/components/UI/AlertMessage";
-import SearchItem from "@/components/layout/search-list/SearchItem";
+import Item from "@/components/layout/search-list/Item";
 import SearchItemSkeleton from "@/components/layout/search-list/SearchItemSkeleton";
 import Pagination from "@/components/layout/search-list/Pagination";
 
 export default {
   name: "SearchList",
-  components: {Pagination, SearchItemSkeleton, SearchItem, AlertMsg},
+  components: {Item, Pagination, SearchItemSkeleton, AlertMsg},
   setup() {
     const {getters} = useStore()
 

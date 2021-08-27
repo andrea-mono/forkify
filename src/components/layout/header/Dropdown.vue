@@ -11,15 +11,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$height: 180px;
-
 .dropdown {
   position: absolute;
-  bottom: -$height;
+  top: 100px;
   right: 0;
   z-index: 5;
   background: #fff;
-  height: $height;
+  max-height: 500px;
   opacity: 0;
   box-shadow: 0 .2rem 1rem #ece5e5;
   display: none;
@@ -32,7 +30,6 @@ $height: 180px;
     width: 450px;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
 </style>
