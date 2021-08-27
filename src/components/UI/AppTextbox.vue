@@ -1,5 +1,5 @@
 <template>
-  <input v-model="value" type="text" class="textbox" :placeholder="title" @input="newValue">
+  <input v-model="value" type="text" class="textbox" :class="{ secondary: secondary }" :placeholder="title" @input="newValue">
 </template>
 
 <script>
@@ -15,6 +15,10 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    secondary: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, {emit}) {
@@ -44,6 +48,18 @@ export default {
   border: none;
   border-radius: 5rem;
   /*transition: all 300ms linear;*/
+
+  &.secondary {
+    padding: .5rem 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 1rem;
+    transition: all 100ms linear;
+
+    &:focus {
+      background: #f9f5f3;
+      border-color: #f38e82;
+    }
+  }
 
   &::placeholder {
     font-size: 1.8rem;
