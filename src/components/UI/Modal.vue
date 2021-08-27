@@ -38,8 +38,8 @@ export default {
   emits: ['onclose'],
   setup(props, {emit}) {
     onUpdated(() => props.opened
-                            ? document.querySelector('body').style.overflow = 'hidden'
-                            : document.querySelector('body').style.overflow = 'auto')
+                            ? document.querySelector('body').style.overflowY = 'hidden'
+                            : document.querySelector('body').style.overflowY = 'auto')
 
     const handleEvent = () => emit('onclose')
 

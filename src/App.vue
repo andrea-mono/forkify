@@ -66,6 +66,7 @@ html {
     font-weight: 400;
     background: linear-gradient(to right bottom,#fbdb89,#f48982) no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 
     .container {
       max-width: 1200px;
