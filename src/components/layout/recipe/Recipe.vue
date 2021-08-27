@@ -5,7 +5,7 @@
     <transition name="fade-in">
       <div v-if="recipe && !isLoading" class="content">
         <Banner :asset="recipe.image_url" :title="recipe.title" />
-        <Actions />
+        <Actions :recipe="recipe" />
         <Ingredients :ingredients="recipe.ingredients" />
         <Instructions :publisher="recipe.publisher" :url="recipe.source_url" />
       </div>

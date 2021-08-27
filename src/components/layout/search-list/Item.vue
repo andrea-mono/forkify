@@ -17,7 +17,7 @@ import {useStore} from "vuex";
 import Text from "@/components/UI/Text";
 
 export default {
-  name: "SearchItem",
+  name: "Item",
   components: {Text},
   props: {
     item: {

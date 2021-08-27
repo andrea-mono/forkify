@@ -54,6 +54,8 @@ export default {
     flex-direction: row;
     align-items: baseline;
     text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 </style>

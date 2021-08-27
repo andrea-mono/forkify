@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 
 import recipes from "@/store/modules/recipes";
 import currentRecipe from "@/store/modules/currentRecipe";
+import bookmarks from "@/store/modules/bookmarks";
 
 export default createStore({
   state: {
@@ -59,6 +60,7 @@ export default createStore({
   },
   modules: {
     recipes,
-    currentRecipe
+    currentRecipe,
+    bookmarks
   }
 })

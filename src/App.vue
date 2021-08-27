@@ -29,10 +29,15 @@ export default {
     onMounted(() => {
       dispatch('setViewportSize', window.innerWidth)
       listenViewportSize()
+      getBookmarks()
     })
 
     const listenViewportSize = () => {
       window.addEventListener('resize', () => dispatch('setViewportSize', window.innerWidth))
+    }
+
+    const getBookmarks = () => {
+      dispatch('bookmarks/checkBookmarks')
     }
 
     return {

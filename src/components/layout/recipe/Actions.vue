@@ -5,11 +5,13 @@
       <Servings :servings="4"/>
     </div>
     <ServingsActions />
-    <Bookmark />
+    <Bookmark :id="recipe.recipe_id" @save="handleSave" />
   </div>
 </template>
 
 <script>
+import {useStore} from "vuex";
+
 import Time from "@/components/layout/recipe/Time";
 import Servings from "@/components/layout/recipe/Servings";
 import ServingsActions from "@/components/layout/recipe/ServingsActions";
@@ -17,7 +19,31 @@ import Bookmark from "@/components/layout/recipe/Bookmark";
 
 export default {
   name: "Actions",
-  components: {Bookmark, ServingsActions, Servings, Time}
+  components: {Bookmark, ServingsActions, Servings, Time},
+  props: {
+    recipe: {
+      type: Object,
+      required: true
+    }
+  },
+  setup(props) {
+    const {dispatch} = useStore()
+
+    const handleSave = () => {
+      !checkBookmarksExists() ? dispatch('bookmarks/addBookmark', props.recipe) : dispatch('bookmarks/removeBookmark', props.recipe)
+    }
+
+    const checkBookmarksExists = () => {
+      const bookmarks = JSON.parse(localStorage.getItem('bookmarks'))
+      const { recipe_id } = props.recipe
+
+      return bookmarks ? bookmarks.find(b => b.recipe_id === recipe_id) : false
+    }
+
+    return {
+      handleSave
+    }
+  }
 }
 </script>
 
