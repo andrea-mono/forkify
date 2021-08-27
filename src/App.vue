@@ -64,7 +64,8 @@ html {
   body {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
-    background: linear-gradient(to right bottom,#fbdb89,#f48982);
+    background: linear-gradient(to right bottom,#fbdb89,#f48982) no-repeat;
+    background-size: cover;
 
     .container {
       max-width: 1200px;

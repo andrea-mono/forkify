@@ -4,11 +4,11 @@
       <div v-if="isActive" class="mobile-bookmarks">
         <div class="heading">
           <h2>My Bookmarks</h2>
-          <TimesIcon @click="closeMobileBookmarks"/>
+          <TimesIcon @click="closeMobileBookmarks" />
         </div>
-        <AlertMessage v-if="!items.length" text="No bookmarks yet. Find a nice recipe and bookmark it ;)"/>
+        <AlertMessage v-if="!items.length" text="No bookmarks yet. Find a nice recipe and bookmark it ;)" />
         <div v-else>
-          <Item v-for="item in items" :key="item.recipe_id" :item="item" @click="openBookmark"/>
+          <Item v-for="item in items" :key="item.recipe_id" :item="item" @click="openBookmark" />
         </div>
       </div>
     </transition>
