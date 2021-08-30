@@ -5,6 +5,7 @@
       <SearchList v-if="isActive && !selectedRecipe || actualBreakpoint !== 'md'" />
       <Recipe v-if="!isActive || selectedRecipe || actualBreakpoint !== 'md'"/>
     </main>
+    <Error :shown="error" />
   </div>
 </template>
 
@@ -15,16 +16,18 @@ import {useStore} from "vuex";
 import Header from "@/components/layout/header/Header";
 import SearchList from "@/components/layout/search-list/SearchList";
 import Recipe from "@/components/layout/recipe/Recipe";
+import Error from "@/components/UI/Error";
 
 export default {
   name: 'App',
-  components: {Recipe, SearchList, Header},
+  components: {Error, Recipe, SearchList, Header},
   setup() {
     const {dispatch, getters} = useStore()
 
     const isActive = computed(() => getters['searchActive'])
     const selectedRecipe = computed(() => getters['recipes/getSelectedRecipe'])
     const actualBreakpoint = computed(() => getters['actualBreakpoint'])
+    const error = computed(() => getters['anyError'])
 
     onMounted(() => {
       dispatch('setViewportSize', window.innerWidth)
@@ -43,7 +46,8 @@ export default {
     return {
       isActive,
       selectedRecipe,
-      actualBreakpoint
+      actualBreakpoint,
+      error
     }
   }
 }
@@ -73,8 +77,12 @@ html {
       margin: auto;
 
       main {
-        min-height: 1070px;
+        min-height: calc(100vh - 100px);
         display: flex;
+
+        @media screen and (min-width: 1024px) {
+          min-height: 1070px;
+        }
       }
 
       @media screen and (min-width: 1023px) {

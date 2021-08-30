@@ -1,5 +1,5 @@
 <template>
-  <button class="decrease">
+  <button class="decrease" @click="handleClick">
     <DecreaseIcon />
   </button>
 </template>
@@ -9,7 +9,16 @@ import DecreaseIcon from "@/components/UI/icons/DecreaseIcon";
 
 export default {
   name: "Decrease",
-  components: {DecreaseIcon}
+  components: {DecreaseIcon},
+  setup(_,{emit}) {
+    const handleClick = () => {
+      emit('decrease')
+    }
+
+    return {
+      handleClick
+    }
+  }
 }
 </script>
 

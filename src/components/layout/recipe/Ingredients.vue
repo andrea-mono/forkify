@@ -1,12 +1,13 @@
 <template>
   <div class="ingredients">
     <h2>recipe ingredients</h2>
-    <Ingredient v-for="ingredient in ingredients" :key="ingredient" :text="ingredient" />
+    <Ingredient v-for="ingredient in ingredients" :key="ingredient" :ingredient="ingredient" />
   </div>
 </template>
 
 <script>
 import Ingredient from "@/components/layout/recipe/Ingredient";
+
 export default {
   name: "Ingredients",
   components: {Ingredient},

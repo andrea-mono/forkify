@@ -1,5 +1,5 @@
 <template>
-  <button class="increase">
+  <button class="increase" @click="handleClick">
     <IncreaseIcon />
   </button>
 </template>
@@ -9,7 +9,16 @@ import IncreaseIcon from "@/components/UI/icons/IncreaseIcon";
 
 export default {
   name: "Increase",
-  components: {IncreaseIcon}
+  components: {IncreaseIcon},
+  setup(_,{emit}) {
+    const handleClick = () => {
+      emit('increase')
+    }
+
+    return {
+      handleClick
+    }
+  }
 }
 </script>
 

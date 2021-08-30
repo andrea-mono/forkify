@@ -17,7 +17,8 @@ export default createStore({
     actualViewport: null,
     breakPoints: {
       md: '1023'
-    }
+    },
+    error: false
   },
   mutations,
   actions,

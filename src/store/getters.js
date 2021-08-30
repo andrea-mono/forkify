@@ -14,5 +14,8 @@ export default {
         }
 
         return state.actualViewport[0]
+    },
+    anyError(state) {
+        return state.error
     }
 }

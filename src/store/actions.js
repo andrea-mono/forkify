@@ -10,5 +10,8 @@ export default {
     },
     setViewportSize({commit}, width) {
         commit('setViewportSize', width)
+    },
+    setError({commit}, error) {
+        commit('setError', error)
     }
 }

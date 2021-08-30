@@ -18,5 +18,8 @@ export default {
 
             index++
         })
+    },
+    setError(state, error = true) {
+        state.error = error
     }
 }

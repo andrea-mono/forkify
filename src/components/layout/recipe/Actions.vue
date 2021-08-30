@@ -1,8 +1,8 @@
 <template>
   <div class="actions">
     <div class="info">
-      <Time :minutes="30"/>
-      <Servings :servings="4"/>
+      <Time :minutes="recipe.time" />
+      <Servings :servings="recipe.servings" />
     </div>
     <ServingsActions />
     <Bookmark :id="recipe.recipe_id" @save="handleSave" />
